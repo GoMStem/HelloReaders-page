@@ -144,7 +144,7 @@ export default function Page() {
           },
           {
             title: "Personalised Learning",
-            description: "**Classes are tailored to each student's reading level, comprehension, and learning pace.**"
+            description: "Classes are tailored to each student's reading level, comprehension, and learning pace."
           },
           {
             title: "Deep Understanding",
