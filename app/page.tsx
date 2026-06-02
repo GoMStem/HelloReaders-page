@@ -400,15 +400,15 @@ export default function Page() {
         features: [
           {
             title: "Understanding Through Reading",
-            description: "Through paper books and audiobooks,\nstudents build deep comprehension\nand **meaningful understanding.**"
+            description: "Through paper books and audiobooks,\nstudents build deep comprehension\nand meaningful understanding."
           },
           {
             title: "Logical & Critical Thinking",
-            description: "**Through Reading and Brain Maths,\nstudents develop reasoning\nand problem-solving skills.**"
+            description: "Through Reading and Brain Maths,\nstudents develop reasoning\nand problem-solving skills."
           },
           {
             title: "Expression & Communication",
-            description: "**Through retelling, discussion, and writing,\nstudents learn to express their thoughts\nclearly and confidently.**"
+            description: "Through retelling, discussion, and writing,\nstudents learn to express their thoughts\nclearly and confidently."
           }
         ]
       },
