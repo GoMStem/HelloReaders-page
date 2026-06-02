@@ -189,10 +189,6 @@ export default function Page() {
             description: "**Additional arithmetic and foundational practice are provided alongside the main curriculum.**"
           },
           {
-            title: "Free Maths Clinic Class",
-            description: "A free maths clinic is held every 4–5 weeks\nto review previous learning, fill learning gaps, and revise advanced problem-solving questions."
-          },
-          {
             title: "Progress Check",
             description: "Regular assessments help monitor each student's understanding, progress, and overall development."
           },
