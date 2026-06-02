@@ -363,7 +363,7 @@ export default function Page() {
       },
       contact: {
         title: "상담 및 문의",
-        subtitle: "언제든지 편하게 연락주세요. 성심껏 상담해 드리겠습니다.",
+        subtitle: "언제든지 편하게 연락주세요.",
         phone: "전화 문의",
         email: "이메일",
         location: "오시는 길",
