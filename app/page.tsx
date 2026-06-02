@@ -715,8 +715,8 @@ export default function Page() {
       }}>
         <div className="max-w-4xl mx-auto text-center w-full">
           <div className="mb-6">
-            <span className="text-xs tracking-widest" style={{ color: colors.textGray, letterSpacing: '3px' }}>
-              Reading - Debating & Essay Writing - Brain Maths
+            <span className="text-xs tracking-widest whitespace-pre-line sm:whitespace-normal" style={{ color: colors.textGray, letterSpacing: '3px' }}>
+              Reading - Debating & Essay Writing -{'\n'}Brain Maths
             </span>
           </div>
 
