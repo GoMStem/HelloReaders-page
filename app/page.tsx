@@ -424,8 +424,8 @@ export default function Page() {
       },
       faq: {
         title: "Frequently Asked Questions",
-        subtitle: "Find answers to common questions",
-        tabs: { reading: "Reading Program", debating: "Debating & Essay Writing Program", maths: "Maths Program", other: "General Questions" },
+        subtitle: "",
+        tabs: { reading: "Reading Program", debating: "Debating & Essay Writing Program", maths: "Maths Program", other: "General Inquiries" },
         items: {
           reading: [
             {
@@ -1047,9 +1047,11 @@ export default function Page() {
             <h2 className="text-3xl sm:text-4xl font-bold mb-4" style={{ color: colors.text }}>
               {content[language].faq.title}
             </h2>
-            <p className="text-lg" style={{ color: colors.textGray }}>
-              {content[language].faq.subtitle}
-            </p>
+            {content[language].faq.subtitle && (
+              <p className="text-lg" style={{ color: colors.textGray }}>
+                {content[language].faq.subtitle}
+              </p>
+            )}
             <div style={{ width: '48px', height: '1px', background: `linear-gradient(to right, transparent, ${colors.primary}, transparent)`, margin: '1.5rem auto 0' }} />
           </div>
 
