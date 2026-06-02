@@ -157,11 +157,11 @@ export default function Page() {
         ]
       },
       debating: {
-        title: "Why Hello Readers **Debating & Essay Writing Program**",
+        title: "Why Hello Readers\n**Debating & Essay Writing Program**",
         items: [
           {
             title: "Weekly Topics",
-            description: "**Students explore a new topic every week\nthroughout the year with no repetition.**"
+            description: "Students explore a new topic every week\nthroughout the year with no repetition."
           },
           {
             title: "Structured Writing Goals",
@@ -173,7 +173,7 @@ export default function Page() {
           },
           {
             title: "Small Group Discussion",
-            description: "**Classes are limited to a maximum of 4 students,\ngiving every student enough time to share and express their ideas confidently.**"
+            description: "Classes are limited to a maximum of 4 students,\ngiving every student enough time to share and express their ideas confidently."
           },
         ]
       },
