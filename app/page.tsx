@@ -482,16 +482,16 @@ export default function Page() {
         }
       },
       contact: {
-        title: "Consultation & Inquiry",
-        subtitle: "Feel free to contact us anytime. We will provide sincere consultation.",
+        title: "Contact Us",
+        subtitle: "",
         phone: "Phone",
         email: "Email",
         location: "Location",
         hours: "Hours: Weekdays 13:00 – 20:00",
-        consultLabel: 'Consultation',
-        consultTitle: 'Have questions for us?',
-        consultDesc: 'Submit your inquiry through the form below.',
-        consultBtn: 'Request a Consultation',
+        consultLabel: 'INQUIRY',
+        consultTitle: 'Need more information?',
+        consultDesc: '',
+        consultBtn: 'Submit the form',
       },
       footer: {
         copyright: "© 2026 Hello Readers. All rights reserved."
@@ -1147,9 +1147,11 @@ export default function Page() {
             <h2 className="text-3xl sm:text-4xl font-bold mb-4" style={{ color: colors.text }}>
               {content[language].contact.title}
             </h2>
-            <p className="text-lg" style={{ color: colors.textGray }}>
-              {content[language].contact.subtitle}
-            </p>
+            {content[language].contact.subtitle && (
+              <p className="text-lg" style={{ color: colors.textGray }}>
+                {content[language].contact.subtitle}
+              </p>
+            )}
             <div style={{ width: '48px', height: '1px', background: `linear-gradient(to right, transparent, ${colors.primary}, transparent)`, margin: '1.5rem auto 0' }} />
           </div>
 
@@ -1171,9 +1173,11 @@ export default function Page() {
                 <p className="font-bold text-base" style={{ color: colors.text }}>
                   {content[language].contact.consultTitle}
                 </p>
-                <p className="text-sm mt-1" style={{ color: colors.textGray }}>
-                  {content[language].contact.consultDesc}
-                </p>
+                {content[language].contact.consultDesc && (
+                  <p className="text-sm mt-1" style={{ color: colors.textGray }}>
+                    {content[language].contact.consultDesc}
+                  </p>
+                )}
               </div>
               <a
                 href="#"
