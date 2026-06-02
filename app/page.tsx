@@ -182,11 +182,11 @@ export default function Page() {
         items: [
           {
             title: "Spiral Learning System",
-            description: "**Students learn through a spiral learning approach\nthat continuously revise key concepts.**"
+            description: "Students learn through a spiral learning approach\nthat continuously revise key concepts."
           },
           {
             title: "Additional Skill Practice",
-            description: "**Additional arithmetic and foundational practice are provided alongside the main curriculum.**"
+            description: "Additional arithmetic and foundational practice are provided alongside the main curriculum."
           },
           {
             title: "Progress Check",
