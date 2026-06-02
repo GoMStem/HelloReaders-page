@@ -554,7 +554,13 @@ export default function Page() {
       >
         {/* Drawer Header */}
         <div className="flex justify-between items-center mb-8">
-          <span className="text-lg font-bold tracking-wider" style={{ color: colors.primary }}>Hello Readers</span>
+          <span className="text-lg font-bold tracking-wider" style={{
+            background: 'linear-gradient(160deg, #C9A227 0%, #D4AF37 30%, #F0CF6A 55%, #D4AF37 75%, #B8941F 100%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+            filter: 'drop-shadow(0 2px 8px rgba(212,175,55,0.4))',
+          }}>Hello Readers</span>
           <button
             onClick={() => setDrawerOpen(false)}
             className="p-2 rounded-lg transition-colors"
@@ -619,7 +625,13 @@ export default function Page() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-6">
               <div className="flex items-center">
-                <span className="text-2xl font-bold tracking-wider" style={{ color: colors.primary }}>Hello Readers</span>
+                <span className="text-2xl font-bold tracking-wider" style={{
+                  background: 'linear-gradient(160deg, #C9A227 0%, #D4AF37 30%, #F0CF6A 55%, #D4AF37 75%, #B8941F 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                  filter: 'drop-shadow(0 2px 8px rgba(212,175,55,0.4))',
+                }}>Hello Readers</span>
               </div>
 
               {/* Language Switcher */}
