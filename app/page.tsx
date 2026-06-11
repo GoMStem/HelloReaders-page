@@ -1183,20 +1183,18 @@ export default function Page() {
                 href="#"
                 className="w-full sm:w-auto px-7 py-3 rounded-lg font-semibold transition-all text-sm text-center"
                 style={{
-                  backgroundColor: colors.primary,
+                  backgroundColor: '#1a1a1a',
                   color: '#ffffff',
-                  boxShadow: '0 4px 14px rgba(212,175,55,0.35)',
-                  border: `2px solid ${colors.primary}`,
+                  boxShadow: '0 4px 14px rgba(0,0,0,0.2)',
+                  border: '2px solid #1a1a1a',
                 }}
                 onMouseEnter={e => {
-                  e.currentTarget.style.backgroundColor = '#ffffff';
-                  e.currentTarget.style.color = colors.primary;
-                  e.currentTarget.style.boxShadow = 'none';
+                  e.currentTarget.style.backgroundColor = '#333333';
+                  e.currentTarget.style.boxShadow = '0 4px 14px rgba(0,0,0,0.3)';
                 }}
                 onMouseLeave={e => {
-                  e.currentTarget.style.backgroundColor = colors.primary;
-                  e.currentTarget.style.color = '#ffffff';
-                  e.currentTarget.style.boxShadow = '0 4px 14px rgba(212,175,55,0.35)';
+                  e.currentTarget.style.backgroundColor = '#1a1a1a';
+                  e.currentTarget.style.boxShadow = '0 4px 14px rgba(0,0,0,0.2)';
                 }}
               >
                 {content[language].contact.consultBtn}
