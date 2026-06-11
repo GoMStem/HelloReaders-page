@@ -27,6 +27,12 @@ const programImages: Record<'reading' | 'debating' | 'maths', string> = {
   maths: '/maths.jpg',
 };
 
+const programImagePositions: Record<'reading' | 'debating' | 'maths', string> = {
+  reading: 'center',
+  debating: 'top',
+  maths: 'center',
+};
+
 export default function Page() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -931,6 +937,7 @@ export default function Page() {
                 width: '100%',
                 height: '100%',
                 objectFit: 'cover',
+                objectPosition: programImagePositions[selectedCurriculum],
               }}
             />
             {/* Dark overlay */}
