@@ -933,7 +933,7 @@ export default function Page() {
           )}
 
           {/* Cards Grid — v2: horizontal oval */}
-          <div className="flex flex-col items-center gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto w-full">
             {curriculum[selectedCurriculum].map((card, index) => (
               <div
                 key={index}
@@ -943,9 +943,7 @@ export default function Page() {
                   border: '1px solid #e8e8e8',
                   boxShadow: '0 4px 18px rgba(0,0,0,0.07)',
                   borderRadius: '999px',
-                  padding: '1.1rem 2.2rem',
-                  width: '100%',
-                  maxWidth: '480px',
+                  padding: '1.1rem 1.8rem',
                   transition: 'border-color 0.3s ease, box-shadow 0.3s ease, opacity 0.65s cubic-bezier(0.4,0,0.2,1), transform 0.65s cubic-bezier(0.4,0,0.2,1)',
                 }}
               >
