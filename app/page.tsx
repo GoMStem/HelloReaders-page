@@ -711,11 +711,11 @@ export default function Page() {
 
       {/* Hero Section */}
       <section id="home" className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 min-h-[85vh] flex items-center" style={{
-        backgroundColor: '#ffffff'
+        backgroundColor: '#0d0d0d'
       }}>
         <div className="max-w-4xl mx-auto text-center w-full">
           <div className="mb-6">
-            <span className="text-xs tracking-widest whitespace-pre-line sm:whitespace-normal" style={{ color: colors.textGray, letterSpacing: '3px' }}>
+            <span className="text-xs tracking-widest whitespace-pre-line sm:whitespace-normal" style={{ color: '#888888', letterSpacing: '3px' }}>
               Reading - Debating & Essay Writing -{'\n'}Brain Maths
             </span>
           </div>
@@ -732,7 +732,7 @@ export default function Page() {
 
           <div className="mb-6">
             <p className="text-xs sm:text-sm tracking-wide uppercase mb-2" style={{
-              color: colors.textGray,
+              color: '#888888',
               letterSpacing: '2px'
             }}>
               <span className="hidden sm:inline">{content[language].hero.subtitle}</span>
@@ -742,10 +742,10 @@ export default function Page() {
 
           {language === 'ko' ? (
             <div className="mb-12 max-w-lg mx-auto text-center hero-text-block">
-              <p className="text-xl sm:text-3xl font-semibold" style={{ color: '#2a2a2a', letterSpacing: '-0.01em' }}>
+              <p className="text-xl sm:text-3xl font-semibold" style={{ color: '#f0f0f0', letterSpacing: '-0.01em' }}>
                 리딩은 <span style={{ color: colors.primary, textShadow: '0 2px 10px rgba(212,175,55,0.45)' }}>이해력</span>을,
               </p>
-              <p className="text-xl sm:text-3xl font-semibold" style={{ color: '#2a2a2a', letterSpacing: '-0.01em' }}>
+              <p className="text-xl sm:text-3xl font-semibold" style={{ color: '#f0f0f0', letterSpacing: '-0.01em' }}>
                 수학은 <span style={{ color: colors.primary, textShadow: '0 2px 10px rgba(212,175,55,0.45)' }}>논리력</span>을 키웁니다.
               </p>
               <div style={{
@@ -754,19 +754,19 @@ export default function Page() {
                 width: '60px',
                 background: `linear-gradient(to right, transparent, ${colors.primary}, transparent)`
               }} />
-              <p className="text-lg sm:text-2xl" style={{ color: '#555555', fontWeight: 400 }}>
+              <p className="text-lg sm:text-2xl" style={{ color: '#aaaaaa', fontWeight: 400 }}>
                 이 두 힘을 연결해
               </p>
-              <p className="text-lg sm:text-2xl font-semibold" style={{ color: '#2a2a2a' }}>
+              <p className="text-lg sm:text-2xl font-semibold" style={{ color: '#f0f0f0' }}>
                 <span style={{ color: colors.primary, textShadow: '0 2px 10px rgba(212,175,55,0.45)' }}>생각하는 아이</span>로 성장시킵니다.
               </p>
             </div>
           ) : (
             <div className="mb-12 max-w-lg mx-auto text-center hero-text-block">
-              <p className="text-xl sm:text-3xl font-semibold" style={{ color: '#2a2a2a', letterSpacing: '-0.01em' }}>
+              <p className="text-xl sm:text-3xl font-semibold" style={{ color: '#f0f0f0', letterSpacing: '-0.01em' }}>
                 Reading builds <span style={{ color: colors.primary, textShadow: '0 2px 10px rgba(212,175,55,0.45)' }}>understanding.</span>
               </p>
-              <p className="text-xl sm:text-3xl font-semibold" style={{ color: '#2a2a2a', letterSpacing: '-0.01em' }}>
+              <p className="text-xl sm:text-3xl font-semibold" style={{ color: '#f0f0f0', letterSpacing: '-0.01em' }}>
                 Maths builds <span style={{ color: colors.primary, textShadow: '0 2px 10px rgba(212,175,55,0.45)' }}>reasoning.</span>
               </p>
               <div style={{
@@ -775,7 +775,7 @@ export default function Page() {
                 width: '60px',
                 background: `linear-gradient(to right, transparent, ${colors.primary}, transparent)`
               }} />
-              <p className="text-xl sm:text-3xl font-bold" style={{ color: '#2a2a2a', letterSpacing: '-0.02em' }}>
+              <p className="text-xl sm:text-3xl font-bold" style={{ color: '#f0f0f0', letterSpacing: '-0.02em' }}>
                 Together, they build{' '}
                 <span style={{ color: colors.primary, textShadow: '0 2px 10px rgba(212,175,55,0.45)' }}>thinkers.</span>
               </p>
@@ -793,8 +793,8 @@ export default function Page() {
                 border: `2px solid ${colors.primary}`,
               }}
               onMouseEnter={e => {
-                e.currentTarget.style.backgroundColor = '#ffffff';
-                e.currentTarget.style.color = colors.primary;
+                e.currentTarget.style.backgroundColor = '#B8941F';
+                e.currentTarget.style.color = '#ffffff';
               }}
               onMouseLeave={e => {
                 e.currentTarget.style.backgroundColor = colors.primary;
