@@ -919,38 +919,52 @@ export default function Page() {
             ))}
           </div>
 
-          {/* Year Range */}
-          {content[language].curriculum.yearRanges[selectedCurriculum].main && (
-            <div className="text-center mb-10">
-              <p className="text-sm font-semibold tracking-widest mb-3"
-                style={{ color: colors.primary, letterSpacing: '0.12em' }}>
-                {content[language].curriculum.yearRanges[selectedCurriculum].main}
-              </p>
-              {content[language].curriculum.yearRanges[selectedCurriculum].levels.length > 0 && (
-                <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-x-6 gap-y-1">
-                  {content[language].curriculum.yearRanges[selectedCurriculum].levels.map((level, i) => (
-                    <span key={i} className="text-xs" style={{ color: colors.textGray }}>
-                      {level}
-                    </span>
-                  ))}
-                </div>
-              )}
-            </div>
-          )}
-
-          {/* Program Image */}
-          <div className="max-w-2xl mx-auto w-full mb-8 overflow-hidden rounded-xl">
+          {/* Program Image + Year Range overlay */}
+          <div className="max-w-2xl mx-auto w-full mb-8 rounded-xl overflow-hidden" style={{ position: 'relative', height: '260px' }}>
+            {/* Image */}
             <img
               src={programImages[selectedCurriculum]}
               alt={selectedCurriculum}
               style={{
+                position: 'absolute',
+                inset: 0,
                 width: '100%',
-                height: '260px',
+                height: '100%',
                 objectFit: 'cover',
-                display: 'block',
-                borderRadius: '12px',
               }}
             />
+            {/* Dark overlay */}
+            <div style={{
+              position: 'absolute',
+              inset: 0,
+              backgroundColor: 'rgba(0, 0, 0, 0.48)',
+            }} />
+            {/* Year text on top */}
+            {content[language].curriculum.yearRanges[selectedCurriculum].main && (
+              <div style={{
+                position: 'absolute',
+                inset: 0,
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: '1.5rem',
+                textAlign: 'center',
+              }}>
+                <p style={{ color: colors.primary, fontSize: '0.85rem', fontWeight: 700, letterSpacing: '0.14em', marginBottom: '0.6rem' }}>
+                  {content[language].curriculum.yearRanges[selectedCurriculum].main}
+                </p>
+                {content[language].curriculum.yearRanges[selectedCurriculum].levels.length > 0 && (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+                    {content[language].curriculum.yearRanges[selectedCurriculum].levels.map((level, i) => (
+                      <span key={i} style={{ color: 'rgba(255,255,255,0.82)', fontSize: '0.75rem' }}>
+                        {level}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
           </div>
 
           {/* Cards Grid — v2: horizontal oval */}
