@@ -933,34 +933,44 @@ export default function Page() {
           )}
 
           {/* Cards Grid */}
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="flex flex-wrap justify-center gap-5">
             {curriculum[selectedCurriculum].map((card, index) => (
               <div
                 key={index}
-                className={`program-card rounded-xl ${index % 2 === 0 ? 'reveal-left' : 'reveal-right'} reveal-d${Math.floor(index / 2) + 1}`}
+                className={`program-card reveal reveal-d${index + 1} flex flex-col items-center text-center`}
                 style={{
                   backgroundColor: '#ffffff',
                   border: '1px solid #e8e8e8',
-                  boxShadow: '0 2px 12px rgba(0,0,0,0.06)',
+                  boxShadow: '0 4px 18px rgba(0,0,0,0.07)',
+                  borderRadius: '28px',
+                  padding: '2rem 1.5rem',
+                  width: '200px',
                   transition: 'border-color 0.3s ease, box-shadow 0.3s ease, opacity 0.65s cubic-bezier(0.4,0,0.2,1), transform 0.65s cubic-bezier(0.4,0,0.2,1)',
                 }}
               >
-                {/* Gold top bar */}
-                <div style={{ height: '3px', background: `linear-gradient(90deg, ${colors.primary}, ${colors.primary}50)` }} />
-
-                <div className="p-7">
-                  {/* Index number */}
-                  <span className="block text-xs font-bold tracking-widest mb-3"
-                    style={{ color: colors.primary, letterSpacing: '0.15em' }}>
+                {/* Circle number badge */}
+                <div style={{
+                  width: '44px',
+                  height: '44px',
+                  borderRadius: '50%',
+                  backgroundColor: `${colors.primary}18`,
+                  border: `2px solid ${colors.primary}50`,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  marginBottom: '1rem',
+                  flexShrink: 0,
+                }}>
+                  <span style={{ color: colors.primary, fontSize: '0.8rem', fontWeight: 700 }}>
                     {String(index + 1).padStart(2, '0')}
                   </span>
-                  <h3 className="text-lg font-bold mb-3" style={{ color: colors.text }}>
-                    {card.title}
-                  </h3>
-                  <p className="whitespace-pre-line" style={{ color: colors.textGray, lineHeight: '1.85' }}>
-                    {card.description}
-                  </p>
                 </div>
+                <h3 className="text-sm font-bold mb-2" style={{ color: colors.text, lineHeight: '1.4' }}>
+                  {card.title}
+                </h3>
+                <p className="whitespace-pre-line text-xs" style={{ color: colors.textGray, lineHeight: '1.75' }}>
+                  {card.description}
+                </p>
               </div>
             ))}
           </div>
