@@ -29,7 +29,7 @@ const programImages: Record<'reading' | 'debating' | 'maths', string> = {
 
 const programImagePositions: Record<'reading' | 'debating' | 'maths', string> = {
   reading: 'center',
-  debating: 'top',
+  debating: 'center 30%',
   maths: 'center',
 };
 
