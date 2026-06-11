@@ -21,6 +21,12 @@ const colors = {
   cardBg: '#ffffff',
 };
 
+const programImages: Record<'reading' | 'debating' | 'maths', string> = {
+  reading: '/reading.jpg',
+  debating: '/debating.jpg',
+  maths: '/maths.jpg',
+};
+
 export default function Page() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -931,6 +937,21 @@ export default function Page() {
               )}
             </div>
           )}
+
+          {/* Program Image */}
+          <div className="max-w-2xl mx-auto w-full mb-8 overflow-hidden rounded-xl">
+            <img
+              src={programImages[selectedCurriculum]}
+              alt={selectedCurriculum}
+              style={{
+                width: '100%',
+                height: '260px',
+                objectFit: 'cover',
+                display: 'block',
+                borderRadius: '12px',
+              }}
+            />
+          </div>
 
           {/* Cards Grid — v2: horizontal oval */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto w-full">
