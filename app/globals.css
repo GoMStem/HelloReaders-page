@@ -1,5 +1,10 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+/* Hero logo font versions — swap class on h1 to change */
+.hero-logo-v1 { font-family: 'Permanent Marker', cursive; }
+/* .hero-logo-v2 { font-family: 'TBD'; } */
 
 @custom-variant dark (&:is(.dark *));
 
