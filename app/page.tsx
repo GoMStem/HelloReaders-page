@@ -920,7 +920,7 @@ export default function Page() {
           </div>
 
           {/* Program Image + Year Range overlay */}
-          <div className="max-w-2xl mx-auto w-full mb-8 rounded-xl overflow-hidden" style={{ position: 'relative', height: '260px' }}>
+          <div className="max-w-2xl mx-auto w-full mb-8 rounded-xl overflow-hidden" style={{ position: 'relative', height: '200px' }}>
             {/* Image */}
             <img
               src={programImages[selectedCurriculum]}
@@ -937,7 +937,7 @@ export default function Page() {
             <div style={{
               position: 'absolute',
               inset: 0,
-              backgroundColor: 'rgba(0, 0, 0, 0.48)',
+              backgroundColor: 'rgba(0, 0, 0, 0.58)',
             }} />
             {/* Year text on top */}
             {content[language].curriculum.yearRanges[selectedCurriculum].main && (
@@ -951,13 +951,20 @@ export default function Page() {
                 padding: '1.5rem',
                 textAlign: 'center',
               }}>
-                <p style={{ color: colors.primary, fontSize: '0.85rem', fontWeight: 700, letterSpacing: '0.14em', marginBottom: '0.6rem' }}>
+                <p style={{
+                  color: '#ffffff',
+                  fontSize: '1.35rem',
+                  fontWeight: 700,
+                  letterSpacing: '0.12em',
+                  marginBottom: '0.6rem',
+                  textShadow: '0 2px 12px rgba(0,0,0,0.5)',
+                }}>
                   {content[language].curriculum.yearRanges[selectedCurriculum].main}
                 </p>
                 {content[language].curriculum.yearRanges[selectedCurriculum].levels.length > 0 && (
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
                     {content[language].curriculum.yearRanges[selectedCurriculum].levels.map((level, i) => (
-                      <span key={i} style={{ color: 'rgba(255,255,255,0.82)', fontSize: '0.75rem' }}>
+                      <span key={i} style={{ color: 'rgba(255,255,255,0.78)', fontSize: '0.78rem', letterSpacing: '0.04em' }}>
                         {level}
                       </span>
                     ))}
