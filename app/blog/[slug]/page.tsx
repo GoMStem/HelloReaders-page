@@ -5,12 +5,12 @@ import { ArrowLeft, Calendar, Clock, Tag } from 'lucide-react';
 import { getPost } from '@/lib/posts';
 
 const categoryColor: Record<string, string> = {
-  '학습법': '#D4AF37',
+  '학습법': '#C2A040',
   '내신 전략': '#4A90D9',
   '자기주도학습': '#5BAD6F',
   '입시 정보': '#C0636A',
   '학원 이야기': '#9B7EC8',
-  'Learning Tips': '#D4AF37',
+  'Learning Tips': '#C2A040',
   'Study Strategy': '#4A90D9',
   'Self-Directed Learning': '#5BAD6F',
   'Education Info': '#C0636A',
@@ -50,7 +50,7 @@ export default async function PostPage({
   if (!post) notFound();
 
   const { meta, contentHtml } = post;
-  const color = categoryColor[meta.category] ?? '#D4AF37';
+  const color = categoryColor[meta.category] ?? '#C2A040';
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#f8f8f8' }}>
@@ -73,7 +73,7 @@ export default async function PostPage({
             <ArrowLeft className="w-4 h-4" />
             {lang === 'ko' ? '블로그로' : 'Back to Blog'}
           </Link>
-          <span className="text-xl font-bold tracking-wider" style={{ color: '#D4AF37' }}>
+          <span className="text-xl font-bold tracking-wider" style={{ color: '#C2A040' }}>
             Hello Readers
           </span>
           <span className="text-sm font-semibold" style={{ color: '#1a1a1a' }}>Blog</span>
@@ -107,7 +107,7 @@ export default async function PostPage({
           </div>
           <div style={{
             height: '1px',
-            background: 'linear-gradient(to right, transparent, #D4AF37, transparent)',
+            background: 'linear-gradient(to right, transparent, #C2A040, transparent)',
             marginTop: '2rem',
           }} />
         </div>

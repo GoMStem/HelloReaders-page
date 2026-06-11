@@ -340,7 +340,7 @@
 .prose-content strong { color: #1a1a1a; font-weight: 700; }
 .prose-content em { font-style: italic; }
 .prose-content blockquote {
-  border-left: 3px solid #D4AF37;
+  border-left: 3px solid #C2A040;
   padding-left: 1.25rem;
   margin: 1.5rem 0;
   color: #666666;
@@ -359,7 +359,7 @@
   margin: 2.5rem 0;
 }
 .prose-content a {
-  color: #D4AF37;
+  color: #C2A040;
   text-decoration: underline;
   text-underline-offset: 2px;
 }

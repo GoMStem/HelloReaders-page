@@ -12,8 +12,8 @@ function renderBold(text: string): React.ReactNode {
 }
 
 const colors = {
-  primary: '#D4AF37',
-  primaryDark: '#B8941F',
+  primary: '#C2A040',
+  primaryDark: '#A68830',
   secondary: '#1a1a1a',
   background: '#ffffff',
   text: '#1a1a1a',
@@ -603,7 +603,7 @@ export default function Page() {
         <div style={{
           height: '100%',
           width: `${scrollProgress}%`,
-          background: 'linear-gradient(90deg, #B8941F 0%, #D4AF37 45%, #F0CF6A 75%, #FDE99A 100%)',
+          background: 'linear-gradient(90deg, #A68830 0%, #C2A040 45%, #D8B858 75%, #ECCE78 100%)',
           boxShadow: '0 0 8px rgba(212,175,55,0.5)',
           transition: 'width 0.08s linear',
         }} />
@@ -721,7 +721,7 @@ export default function Page() {
           </div>
 
           <h1 className="text-[3.375rem] sm:text-[4.125rem] lg:text-[5rem] font-bold mb-8 hero-title hero-logo-v1" style={{
-            background: 'linear-gradient(160deg, #C9A227 0%, #D4AF37 30%, #F0CF6A 55%, #D4AF37 75%, #B8941F 100%)',
+            background: 'linear-gradient(160deg, #B09228 0%, #C2A040 30%, #D8B858 55%, #C2A040 75%, #A68830 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
@@ -793,7 +793,7 @@ export default function Page() {
                 border: `2px solid ${colors.primary}`,
               }}
               onMouseEnter={e => {
-                e.currentTarget.style.backgroundColor = '#B8941F';
+                e.currentTarget.style.backgroundColor = '#A68830';
                 e.currentTarget.style.color = '#ffffff';
               }}
               onMouseLeave={e => {

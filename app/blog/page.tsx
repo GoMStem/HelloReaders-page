@@ -15,12 +15,12 @@ export async function generateMetadata({
 }
 
 const categoryColor: Record<string, string> = {
-  '학습법': '#D4AF37',
+  '학습법': '#C2A040',
   '내신 전략': '#4A90D9',
   '자기주도학습': '#5BAD6F',
   '입시 정보': '#C0636A',
   '학원 이야기': '#9B7EC8',
-  'Learning Tips': '#D4AF37',
+  'Learning Tips': '#C2A040',
   'Study Strategy': '#4A90D9',
   'Self-Directed Learning': '#5BAD6F',
   'Education Info': '#C0636A',
@@ -83,7 +83,7 @@ export default async function BlogPage({
             <ArrowLeft className="w-4 h-4" />
             {t.back}
           </Link>
-          <span className="text-xl font-bold tracking-wider" style={{ color: '#D4AF37' }}>
+          <span className="text-xl font-bold tracking-wider" style={{ color: '#C2A040' }}>
             {t.label}
           </span>
           <span className="text-sm font-semibold" style={{ color: '#1a1a1a' }}>Blog</span>
@@ -95,7 +95,7 @@ export default async function BlogPage({
         className="py-20 px-6 text-center"
         style={{ background: 'linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%)' }}
       >
-        <p className="text-xs tracking-widest uppercase mb-4" style={{ color: '#D4AF37', letterSpacing: '3px' }}>
+        <p className="text-xs tracking-widest uppercase mb-4" style={{ color: '#C2A040', letterSpacing: '3px' }}>
           Hello Readers
         </p>
         <h1 className="text-4xl sm:text-5xl font-bold mb-4" style={{ color: '#1a1a1a' }}>
@@ -114,10 +114,10 @@ export default async function BlogPage({
             <div style={{
               width: '48px',
               height: '1px',
-              background: 'linear-gradient(to right, transparent, #D4AF37, transparent)',
+              background: 'linear-gradient(to right, transparent, #C2A040, transparent)',
               marginBottom: '2rem',
             }} />
-            <p className="text-xs tracking-widest uppercase mb-4" style={{ color: '#D4AF37', letterSpacing: '3px' }}>
+            <p className="text-xs tracking-widest uppercase mb-4" style={{ color: '#C2A040', letterSpacing: '3px' }}>
               {t.preparing}
             </p>
             <h2 className="text-2xl font-bold mb-3" style={{ color: '#1a1a1a' }}>
@@ -129,14 +129,14 @@ export default async function BlogPage({
             <div style={{
               width: '48px',
               height: '1px',
-              background: 'linear-gradient(to right, transparent, #D4AF37, transparent)',
+              background: 'linear-gradient(to right, transparent, #C2A040, transparent)',
               marginTop: '2rem',
             }} />
           </div>
         ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {posts.map((post) => {
-              const color = categoryColor[post.category] ?? '#D4AF37';
+              const color = categoryColor[post.category] ?? '#C2A040';
               return (
                 <Link
                   key={post.slug}
