@@ -711,7 +711,7 @@ export default function Page() {
 
       {/* Hero Section */}
       <section id="home" className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 min-h-[85vh] flex items-center" style={{
-        backgroundColor: '#0d0d0d'
+        background: 'linear-gradient(160deg, #1a1712 0%, #161310 60%, #1e1b14 100%)'
       }}>
         <div className="max-w-4xl mx-auto text-center w-full">
           <div className="mb-6">
