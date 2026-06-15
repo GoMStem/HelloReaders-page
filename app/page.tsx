@@ -896,7 +896,7 @@ export default function Page() {
       {/* Curriculum Section */}
       <section id="programs" className="py-20 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#ffffff' }}>
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16 reveal">
+          <div className="text-center mb-8 sm:mb-16 reveal">
             <h2 className="text-xl sm:text-4xl font-bold mb-4" style={{ color: colors.text }}>
               {content[language].curriculum.title}
             </h2>
@@ -907,7 +907,7 @@ export default function Page() {
           </div>
 
           {/* Tabs */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12 reveal reveal-d1">
+          <div className="flex flex-wrap justify-center gap-3 mb-6 sm:mb-12 reveal reveal-d1">
             {(['reading', 'debating', 'maths'] as const).map((tab) => (
               <button
                 key={tab}
@@ -1026,12 +1026,12 @@ export default function Page() {
       </section>
 
       {/* Why Hello Readers Section */}
-      <section id="why" className="py-20 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#ffffff' }}>
+      <section id="why" className="py-10 sm:py-20 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#ffffff' }}>
         <div className="max-w-5xl mx-auto">
 
           {/* Title */}
-          <div className="text-center mb-16 reveal">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4" style={{ color: colors.text }}>
+          <div className="text-center mb-8 sm:mb-16 reveal">
+            <h2 className="text-2xl sm:text-4xl font-bold mb-4" style={{ color: colors.text }}>
               Why Hello Readers?
             </h2>
             <div style={{ width: '60px', height: '1px', background: `linear-gradient(to right, transparent, ${colors.primary}, transparent)`, margin: '0 auto' }} />
@@ -1067,7 +1067,7 @@ export default function Page() {
                 const panel = whyData[language][selectedWhy];
                 return (
                   <div>
-                    <h3 className="text-xl font-bold mb-10 whitespace-pre-line sm:whitespace-normal" style={{ color: colors.text }}>
+                    <h3 className="text-base sm:text-xl font-bold mb-6 sm:mb-10 whitespace-pre-line sm:whitespace-normal" style={{ color: colors.text }}>
                       {renderBold(panel.title)}
                     </h3>
                     {panel.items.length === 0 ? (
@@ -1101,7 +1101,7 @@ export default function Page() {
       {/* FAQ Section */}
       <section id="faq" className="py-20 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#ffffff' }}>
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16 reveal">
+          <div className="text-center mb-8 sm:mb-16 reveal">
             <h2 className="text-xl sm:text-4xl font-bold mb-4" style={{ color: colors.text }}>
               {content[language].faq.title}
             </h2>
@@ -1114,7 +1114,7 @@ export default function Page() {
           </div>
 
           {/* FAQ Tabs */}
-          <div className="flex flex-wrap justify-center mb-10" style={{ borderBottom: '1px solid #e8e8e8' }}>
+          <div className="flex flex-wrap justify-center mb-5 sm:mb-10" style={{ borderBottom: '1px solid #e8e8e8' }}>
             {(['reading', 'debating', 'maths', 'other'] as const).map(tab => (
               <button
                 key={tab}
@@ -1270,7 +1270,7 @@ export default function Page() {
                 value: '31E Apollo Drive, Rosedale\nAuckland, New Zealand'
               },
             ].map((item, index) => (
-              <div key={index} className={`text-center p-3 sm:p-6 rounded-lg reveal-fade reveal-d${index + 1}`} style={{
+              <div key={index} className={`text-center p-3 sm:p-6 rounded-lg reveal-fade reveal-d${index + 1} flex flex-col items-center justify-center`} style={{
                 backgroundColor: '#ffffff',
                 boxShadow: '0 8px 25px rgba(0,0,0,0.1)',
                 border: '1px solid #e0e0e0'
