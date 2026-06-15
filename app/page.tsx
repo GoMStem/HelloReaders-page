@@ -856,7 +856,7 @@ export default function Page() {
             <div style={{ width: '48px', height: '1px', background: `linear-gradient(to right, transparent, ${colors.primary}, transparent)`, margin: '1.25rem auto 0' }} />
           </div>
 
-          <div className="grid grid-cols-3 gap-2 sm:gap-8">
+          <div className="grid md:grid-cols-3 gap-4 sm:gap-8">
             {features.map((feature, index) => (
               <div
                 key={index}
@@ -881,10 +881,10 @@ export default function Page() {
                 }}>
                   {feature.icon}
                 </div>
-                <h3 className="text-[10px] sm:text-xl font-bold mb-1 sm:mb-3" style={{ color: colors.text }}>
+                <h3 className="text-sm sm:text-xl font-bold mb-1 sm:mb-3" style={{ color: colors.text }}>
                   {feature.title}
                 </h3>
-                <p className="whitespace-pre-line text-[9px] sm:text-base hidden sm:block" style={{ color: colors.textGray, lineHeight: '1.8' }}>
+                <p className="whitespace-pre-line text-xs sm:text-base" style={{ color: colors.textGray, lineHeight: '1.8' }}>
                   {renderBold(feature.description)}
                 </p>
               </div>
