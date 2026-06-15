@@ -732,7 +732,7 @@ export default function Page() {
             </span>
           </div>
 
-          <h1 className="text-[3.375rem] sm:text-[4.125rem] lg:text-[5rem] font-bold mb-8 hero-title hero-logo-v2" style={{
+          <h1 className="text-[3.375rem] sm:text-[4.125rem] lg:text-[5rem] font-bold mb-8 hero-title hero-logo-v3" style={{
             background: 'linear-gradient(160deg, #B09228 0%, #C2A040 30%, #D8B858 55%, #C2A040 75%, #A68830 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',

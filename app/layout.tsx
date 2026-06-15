@@ -15,7 +15,7 @@ export default function RootLayout({
     <html lang="ko">
       <head>
         <link
-          href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Luckiest+Guy&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Luckiest+Guy&family=Fredoka:wght@700&display=swap"
           rel="stylesheet"
         />
       </head>
