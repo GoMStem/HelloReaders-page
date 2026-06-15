@@ -514,9 +514,9 @@ export default function Page() {
   const curriculum = curriculumData[language];
   const faqs = content[language].faq.items[selectedFaqTab];
   const featureIcons = [
-    <BookOpen key="book" className="w-8 h-8" />,
-    <Brain key="brain" className="w-8 h-8" />,
-    <PenLine key="pen" className="w-8 h-8" />,
+    <BookOpen key="book" className="w-5 h-5 sm:w-8 sm:h-8" />,
+    <Brain key="brain" className="w-5 h-5 sm:w-8 sm:h-8" />,
+    <PenLine key="pen" className="w-5 h-5 sm:w-8 sm:h-8" />,
   ];
   const features = content[language].about.features.map((feature, index) => ({
     icon: featureIcons[index],
@@ -842,11 +842,11 @@ export default function Page() {
       {/* About Section */}
       <section id="about" className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#ffffff' }}>
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-10 sm:mb-16 reveal">
-            <h2 className="text-2xl sm:text-4xl font-bold mb-3 sm:mb-4" style={{ color: colors.text }}>
+          <div className="text-center mb-6 sm:mb-16 reveal">
+            <h2 className="text-lg sm:text-4xl font-bold mb-2 sm:mb-4" style={{ color: colors.text }}>
               {content[language].about.title}
             </h2>
-            <p className="text-base sm:text-lg max-w-2xl mx-auto" style={{ color: colors.textGray }}>
+            <p className="text-xs sm:text-lg max-w-2xl mx-auto" style={{ color: colors.textGray }}>
               {language === 'ko' ? (
                 <>
                   모든 학습의 중심은<br className="sm:hidden" /> 읽고 이해하고 생각하는 힘입니다.
@@ -856,11 +856,11 @@ export default function Page() {
             <div style={{ width: '48px', height: '1px', background: `linear-gradient(to right, transparent, ${colors.primary}, transparent)`, margin: '1.25rem auto 0' }} />
           </div>
 
-          <div className="grid md:grid-cols-3 gap-5 sm:gap-8">
+          <div className="grid grid-cols-3 gap-2 sm:gap-8">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className={`about-card p-5 sm:p-8 rounded-xl reveal-d${index + 1}`}
+                className={`about-card p-3 sm:p-8 rounded-xl reveal-d${index + 1}`}
                 style={{
                   backgroundColor: '#ffffff',
                   boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
@@ -875,16 +875,16 @@ export default function Page() {
                   e.currentTarget.style.borderColor = '#e0e0e0';
                 }}
               >
-                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-lg flex items-center justify-center mb-4 sm:mb-6" style={{
+                <div className="w-8 h-8 sm:w-16 sm:h-16 rounded-lg flex items-center justify-center mb-2 sm:mb-6" style={{
                   backgroundColor: `${colors.primary}20`,
                   color: colors.primary
                 }}>
                   {feature.icon}
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3" style={{ color: colors.text }}>
+                <h3 className="text-[10px] sm:text-xl font-bold mb-1 sm:mb-3" style={{ color: colors.text }}>
                   {feature.title}
                 </h3>
-                <p className="whitespace-pre-line text-sm sm:text-base" style={{ color: colors.textGray, lineHeight: '1.8' }}>
+                <p className="whitespace-pre-line text-[9px] sm:text-base hidden sm:block" style={{ color: colors.textGray, lineHeight: '1.8' }}>
                   {renderBold(feature.description)}
                 </p>
               </div>
