@@ -981,32 +981,45 @@ export default function Page() {
             )}
           </div>
 
-          {/* Cards Grid — v2: horizontal oval */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto w-full">
+          {/* Cards Grid — v1: circle motif */}
+          <div className="flex flex-wrap justify-center gap-5">
             {curriculum[selectedCurriculum].map((card, index) => (
               <div
                 key={index}
-                className={`program-card reveal reveal-d${index + 1} flex items-center gap-5`}
+                className={`program-card reveal reveal-d${index + 1} flex flex-col items-center text-center`}
                 style={{
                   backgroundColor: '#ffffff',
                   border: '1px solid #e8e8e8',
                   boxShadow: '0 4px 18px rgba(0,0,0,0.07)',
-                  borderRadius: '999px',
-                  padding: '1.1rem 1.8rem',
+                  borderRadius: '28px',
+                  padding: '2rem 1.5rem',
+                  width: '200px',
                   transition: 'border-color 0.3s ease, box-shadow 0.3s ease, opacity 0.65s cubic-bezier(0.4,0,0.2,1), transform 0.65s cubic-bezier(0.4,0,0.2,1)',
                 }}
               >
-                {/* Number */}
-                <span style={{ color: colors.primary, fontSize: '0.75rem', fontWeight: 700, flexShrink: 0, minWidth: '24px' }}>
-                  {String(index + 1).padStart(2, '0')}
-                </span>
-                {/* Divider */}
-                <div style={{ width: '1px', height: '32px', backgroundColor: `${colors.primary}40`, flexShrink: 0 }} />
-                {/* Text */}
-                <div>
-                  <p className="text-sm font-bold" style={{ color: colors.text }}>{card.title}</p>
-                  <p className="text-xs whitespace-pre-line" style={{ color: colors.textGray, lineHeight: '1.7', marginTop: '2px' }}>{card.description}</p>
+                {/* Circle number badge */}
+                <div style={{
+                  width: '44px',
+                  height: '44px',
+                  borderRadius: '50%',
+                  backgroundColor: `${colors.primary}18`,
+                  border: `2px solid ${colors.primary}50`,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  marginBottom: '1rem',
+                  flexShrink: 0,
+                }}>
+                  <span style={{ color: colors.primary, fontSize: '0.8rem', fontWeight: 700 }}>
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
                 </div>
+                <h3 className="text-sm font-bold mb-2" style={{ color: colors.text, lineHeight: '1.4' }}>
+                  {card.title}
+                </h3>
+                <p className="whitespace-pre-line text-xs" style={{ color: colors.textGray, lineHeight: '1.75' }}>
+                  {card.description}
+                </p>
               </div>
             ))}
           </div>
