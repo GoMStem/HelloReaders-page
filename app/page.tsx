@@ -982,7 +982,7 @@ export default function Page() {
           </div>
 
           {/* Cards Grid — v1: circle motif */}
-          <div className="flex flex-wrap justify-center gap-5">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto w-full">
             {curriculum[selectedCurriculum].map((card, index) => (
               <div
                 key={index}
@@ -992,8 +992,7 @@ export default function Page() {
                   border: '1px solid #e8e8e8',
                   boxShadow: '0 4px 18px rgba(0,0,0,0.07)',
                   borderRadius: '28px',
-                  padding: '2rem 1.5rem',
-                  width: '200px',
+                  padding: '1.5rem 1rem',
                   transition: 'border-color 0.3s ease, box-shadow 0.3s ease, opacity 0.65s cubic-bezier(0.4,0,0.2,1), transform 0.65s cubic-bezier(0.4,0,0.2,1)',
                 }}
               >
