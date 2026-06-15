@@ -99,7 +99,7 @@ export default function Page() {
           },
           {
             title: "Weekly Updates",
-            description: "**매주 학생들의 학습 내용을 공유하며,\n학생의 성장 과정을 확인할 수 있습니다.**"
+            description: "매주 학생들의 학습 내용을 공유하며,\n학생의 성장 과정을 확인할 수 있습니다."
           },
         ]
       },
@@ -284,7 +284,7 @@ export default function Page() {
           },
           {
             title: "생각을 표현하는 힘",
-            description: "**Retelling, Discussion, Writing을 통해\n자신의 생각을 말하고 글로 표현합니다.**"
+            description: "Retelling, Discussion, Writing을 통해\n자신의 생각을 말하고 글로 표현합니다."
           }
         ]
       },
@@ -1350,9 +1350,7 @@ export default function Page() {
         borderTop: '1px solid rgba(212,175,55,0.2)'
       }}>
         <div className="max-w-7xl mx-auto text-center">
-          <span className="brand-text text-xl font-medium" style={{ color: colors.primary, letterSpacing: '0.1em' }}>
-            Hello Readers
-          </span>
+          <img src="/logo.png" alt="Hello Readers" style={{ height: '36px', width: 'auto', margin: '0 auto' }} />
           <div style={{ width: '32px', height: '1px', background: `linear-gradient(to right, transparent, ${colors.primary}, transparent)`, margin: '0.6rem auto 0.8rem' }} />
           <p className="text-xs" style={{ color: '#aaaaaa', letterSpacing: '0.05em' }}>
             {content[language].footer.copyright}
