@@ -897,10 +897,10 @@ export default function Page() {
       <section id="programs" className="py-20 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#ffffff' }}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 reveal">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4" style={{ color: colors.text }}>
+            <h2 className="text-xl sm:text-4xl font-bold mb-4" style={{ color: colors.text }}>
               {content[language].curriculum.title}
             </h2>
-            <p className="text-lg" style={{ color: colors.textGray }}>
+            <p className="text-xs sm:text-lg" style={{ color: colors.textGray }}>
               {content[language].curriculum.subtitle}
             </p>
             <div style={{ width: '48px', height: '1px', background: `linear-gradient(to right, transparent, ${colors.primary}, transparent)`, margin: '1.5rem auto 0' }} />
@@ -926,7 +926,7 @@ export default function Page() {
           </div>
 
           {/* Program Image + Year Range overlay */}
-          <div className="max-w-2xl mx-auto w-full mb-8 rounded-xl overflow-hidden" style={{ position: 'relative', height: '200px' }}>
+          <div className="max-w-2xl mx-auto w-full mb-8 rounded-xl overflow-hidden h-32 sm:h-[200px]" style={{ position: 'relative' }}>
             {/* Image */}
             <img
               src={programImages[selectedCurriculum]}
@@ -1102,11 +1102,11 @@ export default function Page() {
       <section id="faq" className="py-20 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#ffffff' }}>
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16 reveal">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4" style={{ color: colors.text }}>
+            <h2 className="text-xl sm:text-4xl font-bold mb-4" style={{ color: colors.text }}>
               {content[language].faq.title}
             </h2>
             {content[language].faq.subtitle && (
-              <p className="text-lg" style={{ color: colors.textGray }}>
+              <p className="text-xs sm:text-lg" style={{ color: colors.textGray }}>
                 {content[language].faq.subtitle}
               </p>
             )}
@@ -1157,7 +1157,7 @@ export default function Page() {
                       return next;
                     });
                   }}
-                  className="w-full px-6 py-5 text-left flex justify-between items-center"
+                  className="w-full px-4 sm:px-6 py-3 sm:py-5 text-left flex justify-between items-center"
                   style={{
                     color: expandedFaq.has(index) ? colors.primary : colors.text,
                     backgroundColor: expandedFaq.has(index) ? `${colors.primary}08` : 'transparent',
@@ -1170,7 +1170,7 @@ export default function Page() {
                     e.currentTarget.style.backgroundColor = expandedFaq.has(index) ? `${colors.primary}08` : 'transparent';
                   }}
                 >
-                  <span className="font-semibold pr-4">{faq.question}</span>
+                  <span className="font-semibold pr-4 text-sm sm:text-base">{faq.question}</span>
                   <ChevronDown
                     className={`w-5 h-5 flex-shrink-0 transition-transform duration-300 ${expandedFaq.has(index) ? 'rotate-180' : ''}`}
                     style={{ color: colors.primary }}
@@ -1178,7 +1178,7 @@ export default function Page() {
                 </button>
                 {expandedFaq.has(index) && (
                   <div
-                    className="faq-answer px-6 py-4 whitespace-pre-line"
+                    className="faq-answer px-4 sm:px-6 py-3 sm:py-4 whitespace-pre-line text-xs sm:text-sm"
                     style={{
                       color: colors.textGray,
                       borderTop: `1px solid ${colors.primary}22`,
@@ -1202,11 +1202,11 @@ export default function Page() {
       }}>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 reveal">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4" style={{ color: colors.text }}>
+            <h2 className="text-xl sm:text-4xl font-bold mb-4" style={{ color: colors.text }}>
               {content[language].contact.title}
             </h2>
             {content[language].contact.subtitle && (
-              <p className="text-lg" style={{ color: colors.textGray }}>
+              <p className="text-xs sm:text-lg" style={{ color: colors.textGray }}>
                 {content[language].contact.subtitle}
               </p>
             )}
@@ -1260,24 +1260,24 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-3 gap-2 sm:gap-8 max-w-4xl mx-auto">
             {[
-              { icon: <Phone className="w-8 h-8 mx-auto mb-4" style={{ color: colors.primary }} />, label: content[language].contact.phone, value: '021-235-1778' },
-              { icon: <Mail className="w-8 h-8 mx-auto mb-4" style={{ color: colors.primary }} />, label: content[language].contact.email, value: 'helloreaders.nz@gmail.com' },
+              { icon: <Phone className="w-5 h-5 sm:w-8 sm:h-8 mx-auto mb-2 sm:mb-4" style={{ color: colors.primary }} />, label: content[language].contact.phone, value: '021-235-1778' },
+              { icon: <Mail className="w-5 h-5 sm:w-8 sm:h-8 mx-auto mb-2 sm:mb-4" style={{ color: colors.primary }} />, label: content[language].contact.email, value: 'helloreaders.nz@gmail.com' },
               {
-                icon: <MapPin className="w-8 h-8 mx-auto mb-4" style={{ color: colors.primary }} />,
+                icon: <MapPin className="w-5 h-5 sm:w-8 sm:h-8 mx-auto mb-2 sm:mb-4" style={{ color: colors.primary }} />,
                 label: content[language].contact.location,
                 value: '31E Apollo Drive, Rosedale\nAuckland, New Zealand'
               },
             ].map((item, index) => (
-              <div key={index} className={`text-center p-6 rounded-lg reveal-fade reveal-d${index + 1}`} style={{
+              <div key={index} className={`text-center p-3 sm:p-6 rounded-lg reveal-fade reveal-d${index + 1}`} style={{
                 backgroundColor: '#ffffff',
                 boxShadow: '0 8px 25px rgba(0,0,0,0.1)',
                 border: '1px solid #e0e0e0'
               }}>
                 {item.icon}
-                <h3 className="font-semibold mb-2" style={{ color: colors.text }}>{item.label}</h3>
-                <p className="whitespace-pre-line" style={{ color: colors.textGray }}>{item.value}</p>
+                <h3 className="font-semibold mb-1 sm:mb-2 text-xs sm:text-base" style={{ color: colors.text }}>{item.label}</h3>
+                <p className="whitespace-pre-line text-[10px] sm:text-sm break-all" style={{ color: colors.textGray }}>{item.value}</p>
               </div>
             ))}
           </div>
