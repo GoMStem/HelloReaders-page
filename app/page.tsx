@@ -328,7 +328,7 @@ export default function Page() {
           maths: [
             {
               question: "어떤 방식으로 수업하며, 어떤 교재를 사용하나요?",
-              answer: "수업은 Oxford 교재와 Singapore Maths 교재를 기반으로 진행됩니다.\n\nOxford 교재를 통해서는 매주 Numbers, Geometry, Statistics의 세 가지 영역을 spiral 방식으로 학습합니다. 개념을 먼저 설명한 뒤, 다양한 문제 풀이를 통해 이해를 확장하는 방식으로 수업이 진행됩니다. 또한 Singapore Maths를 활용하여 사고력 중심의 심화 수학을 학습합니다."
+              answer: "수업은 Oxford 교재와 Singapore Maths 교재를 기반으로 진행됩니다.\n\nOxford 교재를 통해서는 매주 Numbers, Geometry, Statistics의 세 가지 영역을 spiral 방식으로 학습합니다. 또한 Singapore Maths를 통하여 사고력 중심의 심화 수학을 학습합니다."
             },
             {
               question: "영어로 수학을 배우는 것과 한국어로 뉴질랜드 수학을 배우는 것은 어떤 차이가 있나요?",
