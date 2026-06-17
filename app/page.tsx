@@ -129,7 +129,7 @@ export default function Page() {
         items: [
           {
             title: "Spiral Learning System",
-            description: "**스파이럴 방식으로 개념을 반복하며 학습합니다.**"
+            description: "스파이럴 방식으로 개념을 반복하며 학습합니다."
           },
           {
             title: "Free Maths Clinic Class",
