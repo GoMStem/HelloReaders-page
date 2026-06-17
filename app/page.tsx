@@ -1263,11 +1263,11 @@ export default function Page() {
           <div className="grid grid-cols-3 gap-2 sm:gap-8 max-w-4xl mx-auto">
             {[
               { icon: <Phone className="w-5 h-5 sm:w-8 sm:h-8 mx-auto mb-2 sm:mb-4" style={{ color: colors.primary }} />, label: content[language].contact.phone, value: '021-235-1778' },
-              { icon: <Mail className="w-5 h-5 sm:w-8 sm:h-8 mx-auto mb-2 sm:mb-4" style={{ color: colors.primary }} />, label: content[language].contact.email, value: 'helloreaders.nz@gmail.com' },
+              { icon: <Mail className="w-5 h-5 sm:w-8 sm:h-8 mx-auto mb-2 sm:mb-4" style={{ color: colors.primary }} />, label: content[language].contact.email, value: 'Helloreaders.nz\n@gmail.com' },
               {
                 icon: <MapPin className="w-5 h-5 sm:w-8 sm:h-8 mx-auto mb-2 sm:mb-4" style={{ color: colors.primary }} />,
                 label: content[language].contact.location,
-                value: '31E Apollo Drive, Rosedale\nAuckland, New Zealand'
+                value: '31E Apollo Drive,\nRosedale Auckland,\nNew Zealand'
               },
             ].map((item, index) => (
               <div key={index} className={`text-center p-3 sm:p-6 rounded-lg reveal-fade reveal-d${index + 1} flex flex-col items-center justify-center`} style={{
@@ -1350,7 +1350,7 @@ export default function Page() {
         borderTop: '1px solid rgba(212,175,55,0.2)'
       }}>
         <div className="max-w-7xl mx-auto text-center">
-          <img src="/logo.png" alt="Hello Readers" style={{ height: '36px', width: 'auto', margin: '0 auto' }} />
+          <img src="/logo.png" alt="Hello Readers" style={{ height: '28px', width: 'auto', margin: '0 auto' }} />
           <div style={{ width: '32px', height: '1px', background: `linear-gradient(to right, transparent, ${colors.primary}, transparent)`, margin: '0.6rem auto 0.8rem' }} />
           <p className="text-xs" style={{ color: '#aaaaaa', letterSpacing: '0.05em' }}>
             {content[language].footer.copyright}
