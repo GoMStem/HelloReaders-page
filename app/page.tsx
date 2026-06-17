@@ -227,7 +227,7 @@ export default function Page() {
         { title: "Foundation Building", description: "학년별 개념과 커리큘럼을 탄탄하게 완성합니다." },
         { title: "Analysis & Reasoning", description: "분석하며 논리적으로 사고하는 힘을 기릅니다." },
         { title: "Problem Solving", description: "Reasoning과 Problem Solving에 집중합니다." },
-        { title: "Advanced Thinking Maths", description: "토픽별 사고력 수학과 심화 문장제 문제를 진행합니다." },
+        { title: "Advanced Thinking", description: "토픽별 사고력 수학과 심화 문장제 문제를 진행합니다." },
       ],
     },
     en: {
@@ -247,7 +247,7 @@ export default function Page() {
         { title: "Foundation Building", description: "Students build strong foundations by completing their year-level curriculum during the first half of the year." },
         { title: "Analysis & Reasoning", description: "Students develop logical thinking by reading, analyzing, and understanding mathematical problems." },
         { title: "Problem Solving", description: "Students focus on reasoning and problem-solving rather than repetitive calculations." },
-        { title: "Advanced Thinking Maths", description: "In the second half of the year, students work on topic-based critical thinking maths and advanced word problems." },
+        { title: "Advanced Thinking", description: "In the second half of the year, students work on topic-based critical thinking maths and advanced word problems." },
       ],
     },
   };
