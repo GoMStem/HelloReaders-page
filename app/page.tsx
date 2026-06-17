@@ -148,7 +148,7 @@ export default function Page() {
         items: [
           {
             title: "Paper Books & **Audiobooks**",
-            description: "Paper books help students build focus and deeper comprehension,\nwhile audiobooks develop **a** natural understanding of English flow and expression.\nReading levels grow best when reading and listening work together."
+            description: "Paper books help students build focus and deeper comprehension,\nwhile audiobooks develop a natural understanding of English flow and expression.\nReading levels grow best when reading and listening work together."
           },
           {
             title: "Flexible Schedule",
@@ -157,10 +157,6 @@ export default function Page() {
           {
             title: "Personalised Learning",
             description: "Classes are tailored to each student's reading level, comprehension, and learning pace."
-          },
-          {
-            title: "Deep Understanding",
-            description: "Teachers fully understand the books used in class\nand guide students beyond surface-level comprehension through meaningful discussion and questioning."
           },
           {
             title: "Weekly Updates",
