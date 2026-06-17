@@ -986,7 +986,7 @@ export default function Page() {
             {curriculum[selectedCurriculum].map((card, index) => (
               <div
                 key={index}
-                className={`program-card reveal reveal-d${index + 1} flex flex-col items-center text-center`}
+                className={`program-card reveal reveal-d${index + 1} flex flex-col items-center justify-center text-center`}
                 style={{
                   backgroundColor: '#ffffff',
                   border: '1px solid #e8e8e8',
