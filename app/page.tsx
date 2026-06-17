@@ -1277,7 +1277,7 @@ export default function Page() {
               }}>
                 {item.icon}
                 <h3 className="font-semibold mb-1 sm:mb-2 text-xs sm:text-base" style={{ color: colors.text }}>{item.label}</h3>
-                <p className="whitespace-pre-line text-[10px] sm:text-sm break-all" style={{ color: colors.textGray }}>{item.value}</p>
+                <p className="whitespace-pre-line text-[10px] sm:text-sm" style={{ color: colors.textGray }}>{item.value}</p>
               </div>
             ))}
           </div>
