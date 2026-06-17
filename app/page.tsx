@@ -412,7 +412,7 @@ export default function Page() {
           },
           {
             title: "Logical & Critical Thinking",
-            description: "Through Reading and Brain Maths,\nstudents develop reasoning\nand problem-solving skills."
+            description: "Through Reading and Brain Maths,\nstudents develop reasoning and problem-solving skills."
           },
           {
             title: "Expression & Communication",
@@ -851,7 +851,11 @@ export default function Page() {
                 <>
                   모든 학습의 중심은<br className="sm:hidden" /> 읽고 이해하고 생각하는 힘입니다.
                 </>
-              ) : content[language].about.subtitle}
+              ) : (
+                <>
+                  The foundation of all learning is the ability<br className="sm:hidden" /> to read, understand, and think.
+                </>
+              )}
             </p>
             <div style={{ width: '48px', height: '1px', background: `linear-gradient(to right, transparent, ${colors.primary}, transparent)`, margin: '1.25rem auto 0' }} />
           </div>
