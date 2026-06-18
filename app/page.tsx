@@ -444,6 +444,14 @@ export default function Page() {
               question: "Can siblings attend classes at the same time?",
               answer: "Yes. Since classes are not strictly divided by school year level, students are taught according to their individual reading level and comprehension. This allows siblings to attend classes during the same time slot while still receiving personalised learning suited to their own abilities."
             },
+            {
+              question: "What are the class hours and arrival times?",
+              answer: "The Reading Program operates with flexible arrival between 3:15 PM and 4:30 PM after school. Each student's class begins from the time they arrive and runs for the duration of their scheduled lesson.\n\nClass Duration\nYear 1–2: 1 hour 20 minutes\nYear 3–8: 2 hours\n\nYear 3 class duration may be adjusted depending on the student's concentration span and workload."
+            },
+            {
+              question: "Are make-up classes available for absences?",
+              answer: "If a student is unable to attend due to personal circumstances, parents must notify us before 12:00 PM on the day of the class.\n\nWhere availability permits, one make-up class per term may be offered on an alternative day.\n\nPlease note that missed classes are otherwise non-refundable and non-transferable.\n\nMake-up classes must be used within the same term and are offered in addition to the student's regular scheduled class.\n\nRepeated absences without prior."
+            },
           ],
           debating: [
             {
