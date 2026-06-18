@@ -181,7 +181,7 @@ export default function Page() {
           },
           {
             title: "Small Group Discussion",
-            description: "Classes are limited to a maximum of 4 students,\ngiving every student enough time to share and express their ideas confidently."
+            description: "All classes are conducted in small groups to ensure individual attention and active participation."
           },
         ]
       },
