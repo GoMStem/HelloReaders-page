@@ -74,7 +74,7 @@ export default function Page() {
     );
     document.querySelectorAll('.reveal:not(.visible), .reveal-left:not(.visible), .reveal-right:not(.visible), .reveal-scale:not(.visible), .reveal-fade:not(.visible), .reveal-gentle:not(.visible), .about-card:not(.visible)').forEach(el => observer.observe(el));
     return () => observer.disconnect();
-  }, [selectedCurriculum, selectedWhy]);
+  }, [selectedCurriculum, selectedWhy, selectedFaqTab, language]);
 
   const whyData = {
     ko: {
