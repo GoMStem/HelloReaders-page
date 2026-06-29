@@ -4,6 +4,11 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Hello Readers',
   description: 'Read deeply · Think logically · Grow intelligently',
+  verification: {
+    other: {
+      'naver-site-verification': '9bd714f1b7bcb807f11ecad069fffa1ef503a0df',
+    },
+  },
 };
 
 export default function RootLayout({
