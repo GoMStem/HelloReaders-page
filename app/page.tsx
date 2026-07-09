@@ -595,6 +595,22 @@ export default function Page() {
           >
             Blog
           </Link>
+          <Link
+            href={`/daily?lang=${language}`}
+            onClick={() => setDrawerOpen(false)}
+            className="flex items-center gap-3 px-4 py-3 rounded-lg font-medium transition-all"
+            style={{ color: colors.text }}
+            onMouseEnter={e => {
+              e.currentTarget.style.backgroundColor = `${colors.primary}12`;
+              e.currentTarget.style.color = colors.primary;
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.backgroundColor = 'transparent';
+              e.currentTarget.style.color = colors.text;
+            }}
+          >
+            Daily Posting
+          </Link>
         </nav>
       </div>
 
@@ -711,6 +727,16 @@ export default function Page() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Blog
+              </Link>
+              <Link
+                href={`/daily?lang=${language}`}
+                className="block py-2 transition-colors"
+                style={{ color: colors.text }}
+                onMouseEnter={e => (e.currentTarget.style.color = colors.primary)}
+                onMouseLeave={e => (e.currentTarget.style.color = colors.text)}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Daily Posting
               </Link>
             </div>
           )}

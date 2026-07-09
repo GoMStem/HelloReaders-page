@@ -9,10 +9,10 @@ const BASE_URL = 'https://helloreaders.co.nz'
 const LANGS = ['ko', 'en'] as const
 type Lang = (typeof LANGS)[number]
 
-// content/posts/{lang} 폴더에서 마크다운 파일명(slug)을 읽어오는 헬퍼.
+// content/{section}/{lang} 폴더에서 마크다운 파일명(slug)을 읽어오는 헬퍼.
 // 폴더가 없거나 비어 있으면 빈 배열을 돌려줘서 에러 없이 넘어감.
-function getSlugs(lang: Lang): string[] {
-  const dir = path.join(process.cwd(), 'content', 'posts', lang)
+function getSlugs(section: 'posts' | 'daily', lang: Lang): string[] {
+  const dir = path.join(process.cwd(), 'content', section, lang)
   if (!fs.existsSync(dir)) return []
   return fs
     .readdirSync(dir)
@@ -33,10 +33,11 @@ function buildAlternates(pathForLang: (lang: Lang) => string, langs: Lang[]) {
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = []
 
-  // 1) 고정 페이지 (홈, 블로그 목록) — 두 언어 모두 존재하므로 서로 번역본으로 묶음
-  const staticPages: { pathFor: (lang: Lang) => string; priority: number; freq: 'monthly' | 'weekly' }[] = [
+  // 1) 고정 페이지 (홈, 블로그 목록, Daily 목록) — 두 언어 모두 존재하므로 서로 번역본으로 묶음
+  const staticPages: { pathFor: (lang: Lang) => string; priority: number; freq: 'monthly' | 'weekly' | 'daily' }[] = [
     { pathFor: (lang) => `/?lang=${lang}`, priority: 1, freq: 'monthly' },
     { pathFor: (lang) => `/blog?lang=${lang}`, priority: 0.8, freq: 'weekly' },
+    { pathFor: (lang) => `/daily?lang=${lang}`, priority: 0.8, freq: 'daily' },
   ]
 
   for (const page of staticPages) {
@@ -52,15 +53,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   // 2) 블로그 글 — 언어별 slug 목록을 모아서, 같은 slug가 양쪽에 다 있으면 번역본으로 묶음
-  const slugsByLang: Record<Lang, string[]> = {
-    ko: getSlugs('ko'),
-    en: getSlugs('en'),
+  const blogSlugsByLang: Record<Lang, string[]> = {
+    ko: getSlugs('posts', 'ko'),
+    en: getSlugs('posts', 'en'),
   }
 
   for (const lang of LANGS) {
-    for (const slug of slugsByLang[lang]) {
-      // 이 slug가 실제로 존재하는 언어만 골라 번역본으로 묶음
-      const availableLangs = LANGS.filter((l) => slugsByLang[l].includes(slug))
+    for (const slug of blogSlugsByLang[lang]) {
+      const availableLangs = LANGS.filter((l) => blogSlugsByLang[l].includes(slug))
 
       entries.push({
         url: `${BASE_URL}/blog/${slug}?lang=${lang}`,
@@ -69,6 +69,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.6,
         alternates: buildAlternates(
           (l) => `/blog/${slug}?lang=${l}`,
+          availableLangs
+        ),
+      })
+    }
+  }
+
+  // 3) Daily Posting 글 — 블로그와 동일 로직
+  const dailySlugsByLang: Record<Lang, string[]> = {
+    ko: getSlugs('daily', 'ko'),
+    en: getSlugs('daily', 'en'),
+  }
+
+  for (const lang of LANGS) {
+    for (const slug of dailySlugsByLang[lang]) {
+      const availableLangs = LANGS.filter((l) => dailySlugsByLang[l].includes(slug))
+
+      entries.push({
+        url: `${BASE_URL}/daily/${slug}?lang=${lang}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.6,
+        alternates: buildAlternates(
+          (l) => `/daily/${slug}?lang=${l}`,
           availableLangs
         ),
       })
