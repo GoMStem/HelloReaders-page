@@ -85,9 +85,7 @@ export default async function DailyPage({
             <ArrowLeft className="w-4 h-4" />
             {t.back}
           </Link>
-          <span className="text-xl font-bold tracking-wider" style={{ color: '#C2A040' }}>
-            {t.label}
-          </span>
+          <img src="/logo.png" alt="Hello Readers" style={{ height: '36px', width: 'auto' }} />
           <span className="text-sm font-semibold" style={{ color: '#1a1a1a' }}>Daily</span>
         </div>
       </header>
