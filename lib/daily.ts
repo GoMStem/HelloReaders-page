@@ -6,6 +6,12 @@ import remarkHtml from 'remark-html';
 
 const dailyDir = path.join(process.cwd(), 'content', 'daily');
 
+function formatDate(value: unknown): string {
+  if (!value) return '';
+  if (value instanceof Date) return value.toISOString().split('T')[0];
+  return String(value);
+}
+
 export interface DailyMeta {
   slug: string;
   title: string;
@@ -30,7 +36,7 @@ export function getAllDailyPosts(lang: 'ko' | 'en'): DailyMeta[] {
       return {
         slug,
         title: data.title ?? '',
-        date: data.date ?? '',
+        date: formatDate(data.date),
         category: data.category ?? '',
         excerpt: data.excerpt ?? '',
         readTime: data.readTime ?? '',
@@ -57,7 +63,7 @@ export async function getDailyPost(
     meta: {
       slug,
       title: data.title ?? '',
-      date: data.date ?? '',
+      date: formatDate(data.date),
       category: data.category ?? '',
       excerpt: data.excerpt ?? '',
       readTime: data.readTime ?? '',

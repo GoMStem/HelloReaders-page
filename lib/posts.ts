@@ -6,6 +6,12 @@ import remarkHtml from 'remark-html';
 
 const postsDir = path.join(process.cwd(), 'content', 'posts');
 
+function formatDate(value: unknown): string {
+  if (!value) return '';
+  if (value instanceof Date) return value.toISOString().split('T')[0];
+  return String(value);
+}
+
 export interface PostMeta {
   slug: string;
   title: string;
@@ -30,7 +36,7 @@ export function getAllPosts(lang: 'ko' | 'en'): PostMeta[] {
       return {
         slug,
         title: data.title ?? '',
-        date: data.date ?? '',
+        date: formatDate(data.date),
         category: data.category ?? '',
         excerpt: data.excerpt ?? '',
         readTime: data.readTime ?? '',
@@ -57,7 +63,7 @@ export async function getPost(
     meta: {
       slug,
       title: data.title ?? '',
-      date: data.date ?? '',
+      date: formatDate(data.date),
       category: data.category ?? '',
       excerpt: data.excerpt ?? '',
       readTime: data.readTime ?? '',
