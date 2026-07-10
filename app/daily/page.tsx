@@ -2,6 +2,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { ArrowLeft, Calendar, Clock, Tag } from 'lucide-react';
 import { getAllDailyPosts } from '@/lib/daily';
+import styles from './daily.module.css';
 
 export async function generateMetadata({
   searchParams,
@@ -159,7 +160,7 @@ export default async function DailyPage({
                     <h2 className="text-lg font-bold mb-3 leading-snug" style={{ color: '#1a1a1a' }}>
                       {post.title}
                     </h2>
-                    <p className="text-sm flex-1 mb-6" style={{ color: '#666666', lineHeight: '1.75' }}>
+                    <p className={`text-sm flex-1 mb-6 ${styles.excerpt}`} style={{ color: '#666666', lineHeight: '1.75' }}>
                       {post.excerpt}
                     </p>
                     <div className="flex items-center gap-4 text-xs" style={{ color: '#999999' }}>
